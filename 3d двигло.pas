@@ -19,6 +19,12 @@ begin
 cubux2:=cubux1+scale*10;
 cubuy2:=cubux1+scale*10;
 end;
+if sel=3 then
+begin
+readln(cubux1);
+readln(cubuy1);
+
+end;
 cubex1:=round(int(cubux1/10));
 cubex2:=round(int(cubux2/10));
 cubey1:=round(int(cubuy1/10));
@@ -28,9 +34,9 @@ cubex4:=round(int((cubux2/10)+dalnost));
 cubey3:=round(int((cubuy1/10)+dalnost));
 cubey4:=round(int((cubuy2/10)+dalnost));
 
-for i:= 1 to 100 do
+for i:= 1 to 500 do
 begin
-line(i,0,i,100,clWhite);
+line(i,0,i,500,clWhite);
 end;
 
 line(cubex1,cubey1,cubex2,cubey1,clBlack);
@@ -55,8 +61,8 @@ case sel of
 
 end;
 textOut(512,50,'Z scale: '+dalnost );
-textOut(512,70,'Scale:  ');
-textOut(512,90,'Position:  ');
+textOut(512,70,'Scale: '+ scale);
+textOut(512,90,'Position: '+cubux1+';'+cubuy1);
 until 2=3;
 
 end.
