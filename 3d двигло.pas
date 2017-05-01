@@ -2,7 +2,7 @@ uses GraphAbc;
 
 var cubex1,cubex2,cubey1,cubey2,cubex3,cubex4,cubey3,cubey4: integer;
 var cubux1,cubux2,cubuy1,cubuy2:real;
-var dalnost,sel:integer;
+var dalnost,sel,scale:integer;
 var i,ii: integer;
 begin
 
@@ -13,6 +13,12 @@ cubuy2:=150;
 repeat
 readln(sel);
 if sel=1 then readln(dalnost);
+if sel=2 then
+begin
+ readln(scale);
+cubux2:=cubux1+scale*10;
+cubuy2:=cubux1+scale*10;
+end;
 cubex1:=round(int(cubux1/10));
 cubex2:=round(int(cubux2/10));
 cubey1:=round(int(cubuy1/10));
