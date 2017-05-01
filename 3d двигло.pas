@@ -13,6 +13,8 @@ var i,ii: integer;
 procedure everythyng();
 var i:integer;
 begin
+cubux2:=cubux1+scale*10;
+cubuy2:=cubux1+scale*10;
 cubex1:=round(int(cubux1/10));
 cubex2:=round(int(cubux2/10));
 cubey1:=round(int(cubuy1/10));
@@ -106,8 +108,10 @@ var b1,b2,b3,b4,b5,b6,b7,b8:buttonABC;
 
 begin
 
-cubux1:=50;
-cubuy1:=50;
+cubux1:=200;
+cubuy1:=200;
+cubux2:=250;
+cubuy2:=250;
 scale:=50;
 dalnost:=50;
 b1 := new buttonABC(547, 70, 15, 15, '+',clGray);
